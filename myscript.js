@@ -1,9 +1,10 @@
 
 
-const choice = ["rock", "paper", "scissors"];
+function computerPlay(RPS) {
+    return choices[Math.floor(Math.random()*choices.length)];
 
+}
 
+var choices = ["rock", "paper", "scissors"]
 
-
-const randomChoice = choice[Math.floor(Math.random()*choice.length)];
-console.log (randomChoice)
+console.log(computerPlay(choices));
