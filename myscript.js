@@ -5,38 +5,60 @@ function computerPlay(RPS) {
 
 }
 
-var choices = ["rock", "paper", "scissors"]
+
+var choices = ["rock", "paper", "scissors"];
+
+var playerScore = 0;
+
+var computerScore = 0;
 
 // console.log(computerPlay(choices)); //
 
 function playRound (playerSelection, computerSelection) { 
     var choose = prompt("rock paper or scissors").toLowerCase();
-    if (choose == "rock" && computerSelection == "paper") {alert( "You lose! Paper beats rock!");}
+    var computerSelection = computerPlay();
 
-    else if (choose == "rock" && computerSelection == "scissors") {alert( "You win! Rock beats scissors");}
+    if (choose == "rock" && computerSelection == "paper") {alert( "You lose! Paper beats rock!"); computerScore++;}
+
+    else if (choose == "rock" && computerSelection == "scissors") {alert( "You win! Rock beats scissors"); playerScore++;}
     
     else if (choose == "rock" && computerSelection == "rock") {alert( "Draw!");}
 
-    else if (choose == "paper" && computerSelection == "scissors") {alert( "You Lose! Scissors beats paper");}
+    else if (choose == "paper" && computerSelection == "scissors") {alert( "You Lose! Scissors beats paper"); computerScore++;}
 
-    else if (choose == "paper" && computerSelection == "rock") {alert( "You win! Paper beats rock!");}
+    else if (choose == "paper" && computerSelection == "rock") {alert( "You win! Paper beats rock!"); playerScore++;}
 
     else if (choose == "paper" && computerSelection == "paper") {alert( "Draw!");}
 
-    else if (choose == "scissors" && computerSelection == "rock") {alert( "You lose! Rock beats scissors");}
+    else if (choose == "scissors" && computerSelection == "rock") {alert( "You lose! Rock beats scissors"); computerScore++;}
 
-    else if (choose == "scissors" && computerSelection == "paper") {alert( "You win! Scissors beat paper!");}
+    else if (choose == "scissors" && computerSelection == "paper") {alert( "You win! Scissors beat paper!"); playerScore++;}
 
     else if (choose == "scissors" && computerSelection == "scissors") {alert( "Draw!");}
 
-    else (choose == playerSelection || "paper" || "scissors") 
-        return computerSelection
+    else ((choose == playerSelection || "paper" || "scissors") && computerSelection); console.log("Computer" + " " + computerScore);
+console.log("Player" + " " + playerScore);
 
     
 }
+function game () {
+for (let i = 0; i < 6; i++) {
+    console.log("ROUND" + " " + i );
+    if (i == 5 && playerScore > computerScore) {console.log("YOU WIN"); break;}
 
+    else if (i == 5 && computerScore > playerScore) {console.log("YOU LOSE"); break;}
 
+    else if (i == 5 && computerScore == playerScore) {console.log("TIE"); break;}
+
+    
+
+    
+ 
+    playRound(playerSelection, computerSelection);
+
+}
+}
 
 const playerSelection = "rock" ;
 const computerSelection = computerPlay();
-console.log(playRound(playerSelection,computerSelection));
+console.log(game(playerSelection,computerSelection));
