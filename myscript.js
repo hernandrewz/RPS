@@ -1,5 +1,4 @@
 
-
 function computerPlay(RPS) {
     return choices[Math.floor(Math.random()*choices.length)];
 
@@ -12,6 +11,10 @@ var playerScore = 0;
 
 var computerScore = 0;
 
+document.createElement('input');
+Element.setAttribute('text');
+const input = document.createElement("inpout");
+input.setAttribute("type", "text");
 // console.log(computerPlay(choices)); //
 
 function playRound (playerSelection, computerSelection) { 
