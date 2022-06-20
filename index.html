@@ -2,6 +2,55 @@
 
 <html lang = "en">
 
+<style>
+
+.rpsButtons {
+display: flex; 
+flex-wrap: wrap;
+justify-content: space-evenly; 
+}
+
+.rock {
+ padding: 15px 32px; 
+ border-color: black; 
+ border-style: solid;
+}
+
+.paper {
+ padding: 15px 32px; 
+ border-color: black; 
+ border-style: solid
+}
+
+.scissors {
+ padding: 15px 32px; 
+ border-color: black; 
+ border-style: solid
+}
+
+
+.rpsTitle {
+display: flex; 
+justify-content: center;
+
+}
+
+
+table, th, td { 
+    border:1px solid black;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
 <title>RockxPaperxScissors</title>
 
 
@@ -13,7 +62,31 @@
 </head>
 
 <body>
-<header>ROCK X PAPER X SCISSORS</header>
+<div class="rpsTitle"><header>ROCK X PAPER X SCISSORS</header></div>
+
+<div class = "rpsButtons">
+
+    <div id = "chosenRock"><div class ="rock"><h2>Rock</h2></div></div>
+    <div id = "chosenPaper"><div class ="paper"><h2>Paper</h2></div></div>
+    <div id = "chosenScissors"><div class ="scissors"><h2>Scissors</h2></div></div>
+
+</div>
+
+
+<div id = "phrase"></div>
+
+<table style = "width: 50%">
+<tr>
+    
+<th>Player</th>
+<th>Computer</th>
+</tr>
+<tr>
+    <td>x</td>
+    <td>x</td>
+</tr>
+</table>
+
 
 <script src="myscript.js">
 
